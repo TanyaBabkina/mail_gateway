@@ -1,0 +1,4 @@
+eml_path,label
+data/sample_emails/legit_invoice.eml,ham
+data/sample_emails/phishing_password.eml,spam
+data/sample_emails/malicious_attachment.eml,spam

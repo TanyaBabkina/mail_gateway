@@ -1,0 +1,13 @@
+From: "Accounting" <accounting@example.org>
+To: manager@company.local
+Subject: Счет и акт выполненных работ
+Message-ID: <legit-001@example.org>
+Authentication-Results: mx.company.local; spf=pass smtp.mailfrom=example.org; dkim=pass header.d=example.org; dmarc=pass
+Content-Type: text/plain; charset="utf-8"
+
+Добрый день.
+
+Направляем счет и акт выполненных работ за апрель. Просим согласовать документы до конца недели.
+
+С уважением,
+Бухгалтерия

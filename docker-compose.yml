@@ -1,5 +1,5 @@
 services:
-  kairos:
+  mail-gateway:
     build: .
     volumes:
       - ./artifacts:/app/artifacts

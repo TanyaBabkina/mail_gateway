@@ -1,0 +1,26 @@
+From: Unknown Sender <sender@external.example>
+To: user@company.local
+Subject: =?utf-8?b?0JTQvtC60YPQvNC10L3RgtGLINC00LvRjyDQvtC/0LvQsNGC0Ys=?=
+Message-ID: <malware-001@external.example>
+Authentication-Results: mx.company.local; spf=softfail
+ smtp.mailfrom=external.example; dkim=none; dmarc=fail
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3629770531690109315=="
+
+--===============3629770531690109315==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+0JTQvtCx0YDRi9C5INC00LXQvdGMLiDQktC+INCy0LvQvtC20LXQvdC40Lgg0LTQvtC60YPQvNC1
+0L3RgtGLINC00LvRjyDQvtC/0LvQsNGC0YsuINCf0YDQvtGB0YzQsdCwINC+0YLQutGA0YvRgtGM
+INGE0LDQudC7INGB0LXQs9C+0LTQvdGPLgo=
+
+--===============3629770531690109315==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice.js"
+MIME-Version: 1.0
+
+ZWNobyBtYWxpY2lvdXM=
+
+--===============3629770531690109315==--
