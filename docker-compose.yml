@@ -1,0 +1,6 @@
+services:
+  kairos:
+    build: .
+    volumes:
+      - ./artifacts:/app/artifacts
+    command: ["scan-dir", "data/sample_emails", "--config", "configs/policies.json"]

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kairos-mail-gateway"
+version = "0.1.0"
+description = "Educational prototype of an adaptive corporate email security gateway"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "T. Babkina"}]
+license = {text = "MIT"}
+
+[project.scripts]
+kairos = "kairos.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
