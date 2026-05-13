@@ -1,0 +1,57 @@
+{
+  "gateway": {
+    "name": "KAIROS",
+    "max_message_size_bytes": 10485760,
+    "trusted_internal_domains": ["company.local", "example.org"],
+    "quarantine_dir": "artifacts/quarantine"
+  },
+  "risk_thresholds": {
+    "deliver_below": 45,
+    "quarantine_below": 85,
+    "reject_from": 85
+  },
+  "checks": {
+    "session": true,
+    "auth": true,
+    "content": true,
+    "urls": true,
+    "attachments": true,
+    "ml": true
+  },
+  "weights": {
+    "session_anomaly": 15,
+    "auth_fail": 25,
+    "content_keyword": 12,
+    "dlp_pattern": 18,
+    "url_suspicious": 22,
+    "dangerous_attachment": 35,
+    "known_bad_hash": 90,
+    "ml_spam": 30
+  },
+  "content": {
+    "spam_keywords": [
+      "срочно подтвердите", "вы выиграли", "получите выплату", "обновите пароль",
+      "urgent action", "verify account", "password expires", "gift card"
+    ],
+    "dlp_regex": [
+      "\\b\\d{4}\\s?\\d{4}\\s?\\d{4}\\s?\\d{4}\\b",
+      "\\b\\d{3}-\\d{3}-\\d{3}\\s?\\d{2}\\b",
+      "\\b\\d{10,12}\\b"
+    ]
+  },
+  "urls": {
+    "shorteners": ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "clck.ru"],
+    "suspicious_tokens": ["login", "verify", "password", "account", "secure", "bank", "pay", "confirm"],
+    "blocked_domains": ["phishing.example", "malware.example", "bad-login.example"]
+  },
+  "attachments": {
+    "dangerous_extensions": [".exe", ".scr", ".bat", ".cmd", ".vbs", ".js", ".ps1", ".com", ".docm", ".xlsm"],
+    "archive_extensions": [".zip"],
+    "known_bad_sha256": []
+  },
+  "adaptive": {
+    "ml_threshold": 0.62,
+    "feedback_min_samples": 20,
+    "threshold_step": 0.03
+  }
+}
